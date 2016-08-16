@@ -9,7 +9,10 @@
 - Tag the last commit as the launch release.
 
 ```bash
-$ git tag -a Launch -m 'Go live'
+git tag -a Launch -m 'Go live'
+
+# Push tags to remote repo
+git push --tags
 ```
 
 ### Upload new site to temporary location
