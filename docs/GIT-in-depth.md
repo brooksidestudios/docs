@@ -1,3 +1,17 @@
+# Comprehensive GIT Guide
+
+## Table of Contents
+
+* [Most common GIT questions and solutions](#most-common-git-questions-and-solutions)
+* [Snippets](#snippets)
+* [Create New Repository (local/server)](#create-new-repository-localserver)
+* [Reset to Previous Commit](#reset-to-previous-commit)
+* [“Dry run” GIT merge](#dry-run-git-merge)
+
+
+
+
+
 ## Most common GIT questions and solutions
 
 Borrowed from “[Most common git screwups/questions and solutions](http://41j.com/blog/2015/02/common-git-screwupsquestions-solutions/)”
@@ -70,6 +84,10 @@ git config core.fileMode false
 git show commitid:filename
 ```
 
+
+
+
+
 ## Snippets
 
 ```sh
@@ -105,6 +123,10 @@ git tag -d 12345
 git push origin :refs/tags/12345
 ```
 
+
+
+
+
 ## Create New Repository (local/server)
 
 ```sh
@@ -127,6 +149,10 @@ git remote add origin git@gitdev.geekrescue.com:new_project.git
 git push -u origin master
 ```
 
+
+
+
+
 ## Reset to Previous Commit
 
 ```sh
@@ -140,4 +166,21 @@ git commit -m "Revert to 56e05fced"
 
 # Update working copy to reflect the new commit
 git reset --hard
+```
+
+
+
+
+
+## “Dry run” GIT merge
+
+Let's say you need to runa git-merge, but you don't have a lot of time to deal with conflicts at this time. If you're afraid there will be a bunch of conflicts and you'd like to run a “dry run” to see how well the merge will go, you can use the following snippets.
+
+```sh
+# Pass the `--no-commit` flag, but also need to
+# pass the `--no-ff` flag to avoid fast-fowards
+git merge --no-commit --no-ff BRANCH_NAME
+
+# Then, to above the merge if necessary
+git merge --abort
 ```
