@@ -174,7 +174,7 @@ git reset --hard
 
 ## “Dry run” GIT merge
 
-Let's say you need to runa git-merge, but you don't have a lot of time to deal with conflicts at this time. If you're afraid there will be a bunch of conflicts and you'd like to run a “dry run” to see how well the merge will go, you can use the following snippets.
+Let's say you need to run a `git merge`, but you don't have a lot of time to deal with conflicts at this time. If you're afraid there will be a bunch of conflicts and you'd like to run a “dry run” to see how well the merge will go, you can use the following commands:
 
 ```sh
 # Pass the `--no-commit` flag, but also need to
